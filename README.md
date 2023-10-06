@@ -70,34 +70,34 @@
   
 
 
-## PAAS-TA-DELIVERY-PIPELINE-RELEASE  
+## ap-pipeline-release  
 
-### PaaS-TA Delivery Pipeline Release Configuration  
+### Application Platform Delivery Pipeline Release Configuration  
 
   - haproxy : 1 machine  
-  - delivery-pipeline-ui : N machine(s)  
-  - delivery-pipeline-service-broker : 1 machine  
-  - delivery-pipeline-common-api : N machine(s)  
-  - delivery-pipeline-api : N machine(s)  
-  - delivery-pipeline-inspection-api : N machine(s)  
-  - delivery-pipeline-binary-storage-api : 1 machine  
-  - delivery-pipeline-scheduler : 1 machine  
+  - ap-pipeline-ui : N machine(s)  
+  - ap-pipeline-broker : 1 machine  
+  - ap-pipeline-common-api : N machine(s)  
+  - ap-pipeline-api : N machine(s)  
+  - ap-pipeline-inspection-api : N machine(s)  
+  - ap-pipeline-binary-storage-api : 1 machine  
+  - ap-pipeline-scheduler : 1 machine  
   - ci_server : N machine(s)  
   - inspection : 1 machine  
   - binary_storage : 1 machine  
   - mariadb : 1 machine  
   - postgres : 1 machine  
 
-### Create PaaS-TA Delivery Pipeline Release  
+### Create Application Platform Delivery Pipeline Release  
   - Download the latest Delivery Pipeline Release  
     ```   
-    $ git clone https://github.com/PaaS-TA/PAAS-TA-DELIVERY-PIPELINE-RELEASE.git
-    $ cd PAAS-TA-DELIVERY-PIPELINE-RELEASE  
+    $ git clone https://github.com/K-PaaS/ap-pipeline-release.git
+    $ cd ap-pipeline-release  
     ```  
   - Download & Copy "source files" into the src directory  
     ```  
     ## download source files
-    $ wget -O src.zip https://nextcloud.paas-ta.org/index.php/s/r94pCqfCkXNANwr/download
+    $ wget -O src.zip https://nextcloud.k-paas.org/index.php/s/9MDaDXwqCExRodf/download
 
     ## unzip download source files
     $ unzip src.zip  
@@ -106,20 +106,20 @@
     src  
         ├── cf-cli  
         │   └── cf-cli_6.26.0_linux_x86-64.tgz  
-        ├── delivery-pipeline-api  
-        │   └── delivery-pipeline-api-1.0.4.war  
-        ├── delivery-pipeline-binary-storage-api  
-        │   └── delivery-pipeline-binary-storage-api.jar  
-        ├── delivery-pipeline-common-api  
-        │   └── delivery-pipeline-common-api-1.0.3.jar
-        ├── delivery-pipeline-inspection-api  
-        │   └── delivery-pipeline-inspection-api.jar  
-        ├── delivery-pipeline-scheduler  
-        │   └── delivery-pipeline-scheduler.jar  
-        ├── delivery-pipeline-service-broker  
-        │   └── delivery-pipeline-service-broker.jar  
-        ├── delivery-pipeline-ui  
-        │   └── delivery-pipeline-ui-1.0.4.war  
+        ├── ap-pipeline-api  
+        │   └── ap-pipeline-api.war  
+        ├── ap-pipeline-binary-storage-api  
+        │   └── ap-pipeline-binary-storage-api.jar  
+        ├── ap-pipeline-common-api  
+        │   └── ap-pipeline-common-api-1.0.3.jar
+        ├── ap-pipeline-inspection-api  
+        │   └── ap-pipeline-inspection-api.jar  
+        ├── ap-pipeline-scheduler  
+        │   └── ap-pipeline-scheduler.jar  
+        ├── ap-pipeline-broker  
+        │   └── ap-pipeline-broker.jar  
+        ├── ap-pipeline-ui  
+        │   └── ap-pipeline-ui-1.0.4.war  
         ├── git  
         │   └── git-2.9.3.tar.gz  
         ├── gradle  
@@ -150,24 +150,24 @@
         ├── python  
         │   └── Python-3.6.9.tgz
         ├── sonarqube  
-        │   └── sonarqube-5.6.7-PaaS-TA.zip
+        │   └── sonarqube-5.6.7-K-PaaS.zip
         ├── sshpass  
         │   └── sshpass-1.06.tar.gz  
         └── swift-all-in-one  
             └── swift-2.31.1.tar.gz
     ```  
-  - Create PaaS-TA Delivery Pipeline Release  
+  - Create Application Platform Delivery Pipeline Release  
     ```  
     ## <VERSION> :: release version (e.g. 1.3.0)
-    ## <RELEASE_TARBALL_PATH> :: release file path (e.g. /home/ubuntu/workspace/paasta-delivery-pipeline-release-<VERSION>.tgz)
-    $ bosh -e <bosh_name> create-release --name=paasta-delivery-pipeline-release --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force
+    ## <RELEASE_TARBALL_PATH> :: release file path (e.g. /home/ubuntu/workspace/ap-pipeline-release-<VERSION>.tgz)
+    $ bosh -e <bosh_name> create-release --name=ap-pipeline --version=<VERSION> --tarball=<RELEASE_TARBALL_PATH> --force
     ```  
 
 ### Deployment    
-  - https://github.com/PaaS-TA/service-deployment  
+  - https://github.com/K-PaaS/service-deployment  
 
 
 ## Contributors ✨
-<a href="https://github.com/PaaS-TA/PAAS-TA-DELIVERY-PIPELINE-RELEASE/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=PaaS-TA/PAAS-TA-DELIVERY-PIPELINE-RELEASE" />
+<a href="https://github.com/K-PaaS/ap-pipeline-release/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=K-PaaS/ap-pipeline-release" />
 </a>

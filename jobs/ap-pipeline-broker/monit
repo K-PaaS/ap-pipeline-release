@@ -1,0 +1,6 @@
+check process ap-pipeline-broker
+  with pidfile /var/vcap/sys/run/ap-pipeline-broker/ap-pipeline-broker.pid
+  start program "/var/vcap/jobs/ap-pipeline-broker/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-pipeline-broker/bin/service_ctl start'"
+  stop program "/var/vcap/jobs/ap-pipeline-broker/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-pipeline-broker/bin/service_ctl stop'"
+  group vcap
+

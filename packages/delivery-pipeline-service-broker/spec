@@ -1,8 +1,0 @@
----
-name: delivery-pipeline-service-broker
-
-dependencies: []
-
-files:
-- delivery-pipeline-service-broker/delivery-pipeline-service-broker.jar
-

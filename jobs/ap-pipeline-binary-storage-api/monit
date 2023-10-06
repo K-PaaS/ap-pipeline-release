@@ -1,0 +1,5 @@
+check process ap-pipeline-binary-storage-api
+  with pidfile /var/vcap/sys/run/ap-pipeline-binary-storage-api/ap-pipeline-binary-storage-api.pid
+  start program "/var/vcap/jobs/ap-pipeline-binary-storage-api/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-pipeline-binary-storage-api/bin/service_ctl start'"
+  stop program "/var/vcap/jobs/ap-pipeline-binary-storage-api/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-pipeline-binary-storage-api/bin/service_ctl stop'"
+  group vcap

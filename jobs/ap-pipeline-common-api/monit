@@ -1,0 +1,5 @@
+check process ap-pipeline-common-api
+  with pidfile /var/vcap/sys/run/ap-pipeline-common-api/ap-pipeline-common-api.pid
+  start program "/var/vcap/jobs/ap-pipeline-common-api/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-pipeline-common-api/bin/service_ctl start'"
+  stop program "/var/vcap/jobs/ap-pipeline-common-api/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-pipeline-common-api/bin/service_ctl stop'"
+  group vcap
