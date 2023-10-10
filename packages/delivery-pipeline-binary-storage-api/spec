@@ -1,8 +1,0 @@
----
-name: delivery-pipeline-binary-storage-api
-
-dependencies: []
-
-files:
-- delivery-pipeline-binary-storage-api/delivery-pipeline-binary-storage-api.jar
-

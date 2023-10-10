@@ -1,0 +1,8 @@
+---
+name: ap-pipeline-common-api
+
+dependencies: []
+
+files:
+- ap-pipeline-common-api/ap-pipeline-common-api*.jar
+

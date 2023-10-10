@@ -1,0 +1,8 @@
+---
+name: ap-pipeline-scheduler
+
+dependencies: []
+
+files:
+- ap-pipeline-scheduler/ap-pipeline-scheduler.jar
+

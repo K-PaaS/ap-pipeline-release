@@ -1,0 +1,5 @@
+# abort script on any command that exits with a non zero value
+set -e
+
+cp ap-pipeline-common-api/ap-pipeline-common-api*.jar ${BOSH_INSTALL_TARGET}/ap-pipeline-common-api.jar
+

@@ -1,8 +1,0 @@
----
-name: delivery-pipeline-inspection-api
-
-dependencies: []
-
-files:
-- delivery-pipeline-inspection-api/delivery-pipeline-inspection-api.jar
-

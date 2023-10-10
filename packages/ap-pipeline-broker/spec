@@ -1,0 +1,8 @@
+---
+name: ap-pipeline-broker
+
+dependencies: []
+
+files:
+- ap-pipeline-broker/ap-pipeline-broker.jar
+

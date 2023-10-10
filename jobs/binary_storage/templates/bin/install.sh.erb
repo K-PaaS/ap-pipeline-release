@@ -112,14 +112,14 @@ if [ ! -d "$DATA_DIR" ]; then
    openstack role add --project <%= p("binary_storage.tenantname") %> --user <%= p("binary_storage.username")%> admin
 
 
-  openstack endpoint create --region paasta swift public http://<%= p("binary_storage.proxy_ip") %>:<%= p("binary_storage.proxy_port") %>/v1/AUTH_%\(project_id\)s
-  #openstack endpoint create --region paasta swift admin http://<%= p("binary_storage.proxy_ip") %>:<%= p("binary_storage.proxy_port") %>/v1
-  #openstack endpoint create --region paasta swift internal http://<%= p("binary_storage.proxy_ip") %>:<%= p("binary_storage.proxy_port") %>/v1/AUTH_%\(project_id\)s
+  openstack endpoint create --region kpaas swift public http://<%= p("binary_storage.proxy_ip") %>:<%= p("binary_storage.proxy_port") %>/v1/AUTH_%\(project_id\)s
+  #openstack endpoint create --region kpaas swift admin http://<%= p("binary_storage.proxy_ip") %>:<%= p("binary_storage.proxy_port") %>/v1
+  #openstack endpoint create --region kpaas swift internal http://<%= p("binary_storage.proxy_ip") %>:<%= p("binary_storage.proxy_port") %>/v1/AUTH_%\(project_id\)s
 
 
-  #openstack endpoint create --region paasta swift public http://localhost:<%= p("binary_storage.proxy_port") %>/v1/AUTH_%\(project_id\)s
-  openstack endpoint create --region paasta swift admin http://localhost:<%= p("binary_storage.proxy_port") %>/v1
-  openstack endpoint create --region paasta swift internal http://localhost:<%= p("binary_storage.proxy_port") %>/v1/AUTH_%\(project_id\)s
+  #openstack endpoint create --region kpaas swift public http://localhost:<%= p("binary_storage.proxy_port") %>/v1/AUTH_%\(project_id\)s
+  openstack endpoint create --region kpaas swift admin http://localhost:<%= p("binary_storage.proxy_port") %>/v1
+  openstack endpoint create --region kpaas swift internal http://localhost:<%= p("binary_storage.proxy_port") %>/v1/AUTH_%\(project_id\)s
 
 
   echo "---------------------------------------------Service Install End"

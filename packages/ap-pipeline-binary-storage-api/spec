@@ -1,0 +1,8 @@
+---
+name: ap-pipeline-binary-storage-api
+
+dependencies: []
+
+files:
+- ap-pipeline-binary-storage-api/ap-pipeline-binary-storage-api.jar
+

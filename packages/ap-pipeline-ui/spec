@@ -1,0 +1,7 @@
+---
+name: ap-pipeline-ui
+
+dependencies: []
+
+files:
+- ap-pipeline-ui/ap-pipeline-ui*.war

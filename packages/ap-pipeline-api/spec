@@ -1,0 +1,7 @@
+---
+name: ap-pipeline-api
+
+dependencies: []
+
+files:
+- ap-pipeline-api/ap-pipeline-api*.war

@@ -1,0 +1,8 @@
+---
+name: ap-pipeline-inspection-api
+
+dependencies: []
+
+files:
+- ap-pipeline-inspection-api/ap-pipeline-inspection-api.jar
+

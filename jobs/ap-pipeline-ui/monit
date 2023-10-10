@@ -1,0 +1,5 @@
+check process ap-pipeline-ui
+  with pidfile /var/vcap/sys/run/ap-pipeline-ui/ap-pipeline-ui.pid
+  start program "/var/vcap/jobs/ap-pipeline-ui/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-pipeline-ui/bin/service_ctl start'"
+  stop program "/var/vcap/jobs/ap-pipeline-ui/bin/monit_debugger service_ctl '/var/vcap/jobs/ap-pipeline-ui/bin/service_ctl stop'"
+  group vcap

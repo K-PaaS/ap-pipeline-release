@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: ap-pipeline-common-api
+---
+spring:
+  #profiles: 
+  #  active: dev
+
+  datasource:
+    url: "<%= p('mariadb.datasource.url')%>"
+    username: "<%= p('mariadb.datasource.username')%>"
+    password: "<%= p('mariadb.datasource.password')%>"
+    driver-class-name: "<%= p('mariadb.datasource.driver_class_name')%>"
+  jpa:
+    database: "<%= p('mariadb.jpa.database.name')%>"
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        strategy: org.hibernate.cfg.EJB3NamingStrategy
+    generate-ddl: false
+
+server:
+  port: <%= p('common_api.server.port')%>
+
+logging:
+  level:
+    ROOT: <%= p('common_api.logging.level')%>
+  path: classpath:logback-spring.xml
+  file: logs/application.log
+
+deliveryPipelineApi:
+  url: <%= p('pipeline_api.url')%>:<%= p('pipeline_api.server.port')%>
+  authorization:
+    id: "<%= p('pipeline_api.authorization.id')%>"
+    password: "<%= p('pipeline_api.authorization.password')%>"
+
